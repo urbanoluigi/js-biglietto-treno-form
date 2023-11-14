@@ -23,4 +23,12 @@ let name = document.getElementById("kmpercorrere").value;
 let name = document.getElementById("age").value;
 
 //ora calcoliamo il prezzo totale del viaggio, secondo queste regole:
-//ilprezzo del biglietto
+//ilprezzo del biglietto è definito in base ai km (0.21€ al km)
+//va applicato uno sconto del 20% per i minorenni
+//va applicato uno sconto del 40% per gli over 65
+
+if (etapersona < 18){
+    prezzobase -= prezzobase * 0.2;
+} else if (etapersona >= 65){
+    prezzobase -= prezzobase * 0.4;
+}
