@@ -13,7 +13,29 @@ console.log("Benvenuto")
 
 function utentehafinito(event){
     event.preventDefault();
+    let name = document.getElementById("name_and_surname").value;
+let km= document.getElementById("kmpercorrere").value;
+let age = document.getElementById("age").value;
+
+document.getElementById("name_surname").innerHTML = name;
+document.getElementById("final-price").innerHTML = name;
+document.getElementById("name_surname").innerHTML = name;
+
+
+    let prezzoBase = kmDaPercorrere * 0.21;
+
+// Applica gli sconti in base all'età
+if (age < 18) {
+    prezzoBase -= prezzoBase * 0.2; 
+} else if (age >= 65) {
+    prezzoBase -= prezzoBase * 0.4; 
 }
+
+// Formatta il prezzo finale con massimo due decimali
+let prezzoFinale = prezzoBase.toFixed(2);
+}
+
+
 
 let name = document.getElementById("name_and_surname").value;
 let km= document.getElementById("kmpercorrere").value;
