@@ -19,10 +19,59 @@
 
   <!-- QUI POTETE INIZIARE IL VOSTRO ESERCIZIO! -->
   <h1 class="text-light" style="text-align: center;">Calcola il tuo biglietto</h1>
-
+<!--creo la card con dentro il form da compilare-->
   <!--aggiungo il form con nome,cognome,km da percorrere e fascia d'età-->
 <!--alla fine del form creo due bottoni, uno che genera la card e l'altro che annulla tutto-->
-
+<div class="container-card">
+<div class="row justify-content-center mt-5 p-5">
+    <div class="col-5">
+<div class="card">
+    <div class="card-body">
+       
+        <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-4">
+              <label for="validationCustom01" class="form-label">Nome e Cognome</label>
+              <input type="text" class="form-control" id="validationCustom01" value="" required>
+              
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom02" class="form-label">km da percorrere</label>
+              <input type="text" class="form-control" id="validationCustom02" value="" required>
+            </div>
+            <div class="col-md-3">
+              <label for="validationCustom04" class="form-label">Fascia d'età</label>
+              <select class="form-select" id="validationCustom04" required>
+                <option selected disabled value="">Scegli</option>
+                <option>Maggiorenne</option>
+                <option>Minorenne</option>
+                <option>Anziano</option>
+               </select>
+              <div class="invalid-feedback">
+                Please select a valid state.
+              </div>
+            </div>
+            <div class="col-md-3">
+              <label for="validationCustom05" class="form-label">Zip</label>
+              <input type="text" class="form-control" id="validationCustom05" required>
+              <div class="invalid-feedback">
+                Please provide a valid zip.
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                <label class="form-check-label" for="invalidCheck">
+                  Agree to terms and conditions
+                </label>
+                <div class="invalid-feedback">
+                  You must agree before submitting.
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-primary" type="submit">Submit form</button>
+            </div>
+          </form>
 
 
 
