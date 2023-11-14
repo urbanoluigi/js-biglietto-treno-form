@@ -30,26 +30,25 @@
        
         <form class="row g-3 needs-validation" onsubmit="utentehafinito(event)">
             <div class="col-md-4">
-              <label for="validationCustom01" class="form-label">Nome e Cognome</label>
+              <label for="name_and_surname" class="form-label">Nome e Cognome</label>
               <input type="text" class="form-control" id="name_and_surname" value="" required>
               
             </div>
             <div class="col-md-4">
-              <label for="validationCustom02" class="form-label">km da percorrere</label>
+              <label for="kmpercorrere" class="form-label">km da percorrere</label>
               <input type="text" class="form-control" id="kmpercorrere" value="" required>
             </div>
             <div class="col-md-3">
-              <label for="validationCustom04" class="form-label">Fascia d'età</label>
+              <label for="age" class="form-label">Fascia d'età</label>
               <select class="form-select" id="age" required>
                 <option selected disabled value="">Scegli</option>
-                <option>Maggiorenne</option>
-                <option>Minorenne</option>
-                <option>Anziano</option>
+                <option> under 18 </option>
+                <option>over 65</option>
                </select>
             </div>
             </div>
             <div style="text-align: center;" class="col-12 p-2">
-                <button type="button" class="btn btn-primary">Genera</button>
+                <button type="button" class="btn btn-primary" id="genera">Genera</button>
                 <button type="button" class="btn btn-primary">Annulla</button>
             </div>
           </form>
@@ -81,7 +80,7 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td id="name_surname"></td>
+                        <td id="nameuser"></td>
                         <td id="offerta"></td>
                         <td id="carrozza"></td>
                         <td id="cp"></td>

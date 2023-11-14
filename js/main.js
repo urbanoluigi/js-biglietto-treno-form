@@ -15,20 +15,18 @@ function utentehafinito(event){
     event.preventDefault();
 }
 
-//ora dall'html i dati dell'utente che ha inserito, ovvero:nome e cognome
-//km da percorrere e fascia d'età
-
 let name = document.getElementById("name_and_surname").value;
-let name = document.getElementById("kmpercorrere").value;
-let name = document.getElementById("age").value;
+let km= document.getElementById("kmpercorrere").value;
+let age = document.getElementById("age").value;
 
-//ora calcoliamo il prezzo totale del viaggio, secondo queste regole:
-//ilprezzo del biglietto è definito in base ai km (0.21€ al km)
-//va applicato uno sconto del 20% per i minorenni
-//va applicato uno sconto del 40% per gli over 65
+    let prezzoBase = kmDaPercorrere * 0.21;
 
-if (etapersona < 18){
-    prezzobase -= prezzobase * 0.2;
-} else if (etapersona >= 65){
-    prezzobase -= prezzobase * 0.4;
+// Applica gli sconti in base all'età
+if (age < 18) {
+    prezzoBase -= prezzoBase * 0.2; 
+} else if (age >= 65) {
+    prezzoBase -= prezzoBase * 0.4; 
 }
+
+// Formatta il prezzo finale con massimo due decimali
+let prezzoFinale = prezzoBase.toFixed(2);
