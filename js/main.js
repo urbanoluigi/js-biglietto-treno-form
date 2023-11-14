@@ -18,10 +18,8 @@ let km= document.getElementById("kmpercorrere").value;
 let age = document.getElementById("age").value;
 
 document.getElementById("nameuser").innerHTML = name;
-document.getElementById("final-price").innerHTML = name;
 
-
-    let prezzoBase = kmDaPercorrere * 0.21;
+let prezzoBase = kmDaPercorrere * 0.21;
 
 // Applica gli sconti in base all'età
 if (age < 18) {
@@ -32,4 +30,6 @@ if (age < 18) {
 
 // Formatta il prezzo finale con massimo due decimali
 let prezzoFinale = prezzoBase.toFixed(2);
+document.getElementById("final-price").innerHTML = prezzoFinale;
 }
+
