@@ -1,0 +1,1 @@
+//alert di default che blocca il sito (eseguito subito)

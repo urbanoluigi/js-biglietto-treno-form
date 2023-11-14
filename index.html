@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrap demo</title>
+  <title>Biglietto del treno</title>
 
   <!-- Questo link serve per importare Bootstap (alto non è che un foglio di stile CSS) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -46,30 +46,11 @@
                 <option>Minorenne</option>
                 <option>Anziano</option>
                </select>
-              <div class="invalid-feedback">
-                Please select a valid state.
-              </div>
             </div>
-            <div class="col-md-3">
-              <label for="validationCustom05" class="form-label">Zip</label>
-              <input type="text" class="form-control" id="validationCustom05" required>
-              <div class="invalid-feedback">
-                Please provide a valid zip.
-              </div>
             </div>
-            <div class="col-12">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                <label class="form-check-label" for="invalidCheck">
-                  Agree to terms and conditions
-                </label>
-                <div class="invalid-feedback">
-                  You must agree before submitting.
-                </div>
-              </div>
-            </div>
-            <div class="col-12">
-              <button class="btn btn-primary" type="submit">Submit form</button>
+            <div style="text-align: center;" class="col-12 p-2">
+                <button type="button" class="btn btn-primary">Genera</button>
+                <button type="button" class="btn btn-primary">Annulla</button>
             </div>
           </form>
 
