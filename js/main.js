@@ -13,23 +13,26 @@ console.log("Benvenuto")
 
 function utentehafinito(event){
     event.preventDefault();
-    let name = document.getElementById("name_and_surname").value;
-let km= document.getElementById("kmpercorrere").value;
-let age = document.getElementById("age").value;
 
-document.getElementById("nameuser").innerHTML = name;
+//qui invece abbiamo tutti gli id con i loro valori
+
+    let name = document.getElementById("name_and_surname").value;
+    let km= document.getElementById("kmpercorrere").value;
+    let age = document.getElementById("age").value;
+
+//qui invece ho iniziato a calcolare il prezzo del ticket
 
 let prezzoBase = kmDaPercorrere * 0.21;
 
 // Applica gli sconti in base all'età
 if (age < 18) {
-    prezzoBase -= prezzoBase * 0.2; 
+    prezzoBase -= prezzoBase * 0.8; 
 } else if (age >= 65) {
-    prezzoBase -= prezzoBase * 0.4; 
+    prezzoBase -= prezzoBase * 0.6; 
 }
-
-// Formatta il prezzo finale con massimo due decimali
 let prezzoFinale = prezzoBase.toFixed(2);
+
+//qui invece abbiamo tutti gli id che vengono printati
+document.getElementById("nameuser").innerHTML = name;
 document.getElementById("final-price").innerHTML = prezzoFinale;
 }
-
